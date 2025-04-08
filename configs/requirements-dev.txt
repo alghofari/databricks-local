@@ -1,0 +1,17 @@
+jellyfish==1.1.0
+pydeequ==1.4.0
+chispa==0.10.1
+openpyxl==3.1.5
+XlsxWriter==3.2.0
+pyodbc==4.0.39
+azure-identity==1.19.0
+graphframes==0.6
+
+# Development-only dependencies
+pyspark==3.5.0
+PyYAML==6.0.2
+pytz==2024.2
+delta-spark==3.2.0
+sqlfluff==3.2.5
+pytest-html==4.1.1
+pytest-cov==6.1.1

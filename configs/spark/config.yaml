@@ -1,0 +1,16 @@
+dev:
+  spark.jars.packages: "com.amazonaws:aws-java-sdk-bundle:1.12.262,io.delta:delta-spark_2.12:3.2.0,org.apache.hadoop:hadoop-aws:3.3.4,com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11,com.amazon.deequ:deequ:2.0.7-spark-3.5,graphframes:graphframes:0.8.2-spark3.0-s_2.12"
+  spark.hadoop.fs.s3a.access.key: ${S3A_ACCESS_KEY}
+  spark.hadoop.fs.s3a.secret.key: ${S3A_SECRET_KEY}
+  spark.hadoop.fs.s3a.endpoint: "http://localhost:9002"
+  spark.hadoop.fs.s3a.path.style.access: "true"
+  spark.hadoop.fs.s3a.impl: "org.apache.hadoop.fs.s3a.S3AFileSystem"
+  spark.sql.extensions: "io.delta.sql.DeltaSparkSessionExtension"
+  spark.sql.catalog.spark_catalog: "org.apache.spark.sql.delta.catalog.DeltaCatalog"
+  spark.sql.catalogImplementation: "hive"
+  spark.sql.session.timeZone: "Asia/Jakarta"
+  spark.serializer: "org.apache.spark.serializer.KryoSerializer"
+  spark.hive.metastore.uris: "thrift://localhost:9083"
+  spark.hive.metastore.schema.verification: "false"
+  spark.sql.warehouse.dir: "s3a://hive/warehouse"
+  spark.hive.metastore.catalog.default: "hive"
